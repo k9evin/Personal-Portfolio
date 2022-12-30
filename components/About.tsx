@@ -10,7 +10,7 @@ function About({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center"
     >
       <div className="flex absolute top-24 gap-3">
         <Image
@@ -20,7 +20,7 @@ function About({}: Props) {
           alt="About me"
           className="inline-flex h-8"
         />
-        <h3 className=" uppercase tracking-[15px] text-gray-500 text-2xl">
+        <h3 className="uppercase tracking-[15px] text-gray-500 text-2xl">
           About
         </h3>
       </div>
@@ -31,7 +31,7 @@ function About({}: Props) {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
         src="https://s1.ax1x.com/2022/12/30/pSpqvY8.png"
-        className="-mb-20 md:mb-0 flex-shrink-0 w-24 h-24 rounded-full object-cover md:w-48 md:h-48 "
+        className="flex-shrink-0 w-24 h-24 rounded-full object-cover md:w-48 md:h-48 mt-10 mb-5"
       />
 
       <div className="space-y-10 px-0 md:px-10">
