@@ -39,15 +39,17 @@ function Header({}: Props) {
         transition={{ duration: 1.7 }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Get In Touch
-        </p>
+        <button className="whitespace-nowrap md:rounded-full bg-white md:shadow transition md:border-2 bg-opacity-0 text-gray-400 md:hover:bg-gray-200 hover:text-black">
+          <SocialIcon
+            className="cursor-pointer"
+            network="email"
+            fgColor="gray"
+            bgColor="transparent"
+          />
+          <p className="uppercase hidden md:inline-flex text-sm font-semibold pr-3">
+            Get In Touch
+          </p>
+        </button>
       </motion.div>
     </header>
   );
