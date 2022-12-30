@@ -1,9 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: Jost, sans-serif;
+  }
+}
+
 @layer components {
-    .heroButton {
-        @apply rounded-full bg-white px-6 py-2 text-gray-500 uppercase text-sm tracking-widest transition-all hover:border-white bg-opacity-0 hover:bg-opacity-10 hover:text-gray-100
-    }
+  .heroButton {
+    @apply rounded-full bg-white px-6 py-2 text-gray-500 uppercase text-sm tracking-widest transition-all hover:border-white bg-opacity-0 hover:bg-opacity-10 hover:text-gray-100
+  }
+
+  .contactInput {
+    @apply outline-none rounded-lg hover:border-gray-400 hover:border-b focus:border-b focus:border-gray-400 bg-slate-400/10 px-6 py-4 text-white placeholder-gray-500
+  }
 }
