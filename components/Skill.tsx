@@ -18,7 +18,7 @@ function Skill({ directionLeft }: Props) {
         src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
         alt="React"
       />
-      <span className="text-white text-lg">React</span>
+      <span className="hidden md:block text-white text-lg">React</span>
     </motion.div>
   );
 }
