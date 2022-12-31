@@ -10,5 +10,7 @@ module.exports = {
   fontFamily: {
     main: ['Jost', 'sans-serif'],
   },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true })
+  ],
 };

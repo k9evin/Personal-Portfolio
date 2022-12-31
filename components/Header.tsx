@@ -1,6 +1,7 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
+import { ArrowDownCircleIcon } from '@heroicons/react/24/solid';
 
 type Props = {};
 
@@ -39,15 +40,12 @@ function Header({}: Props) {
         transition={{ duration: 1.7 }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
-        <button className="whitespace-nowrap md:rounded-full bg-white md:shadow transition md:border-2 bg-opacity-0 text-gray-400 md:hover:bg-gray-200 hover:text-black">
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="gray"
-            bgColor="transparent"
+        <button className="whitespace-nowrap md:rounded-full bg-white md:shadow transition md:border-2 bg-opacity-0 hover:animate-pulse md:hover:animate-none text-gray-300 md:hover:bg-gray-200 md:hover:text-black py-2 px-2 space-x-2">
+          <ArrowDownCircleIcon
+            className="cursor-pointer w-8 h-8 inline-flex"
           />
-          <p className="uppercase hidden md:inline-flex text-sm font-semibold pr-3">
-            Get In Touch
+          <p className="uppercase hidden md:inline-flex text-sm font-semibold pr-1">
+            Download Resume
           </p>
         </button>
       </motion.div>

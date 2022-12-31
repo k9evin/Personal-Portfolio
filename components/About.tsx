@@ -42,7 +42,7 @@ function About({}: Props) {
           </span>{' '}
           background
         </h4>
-        <p className="text-base">
+        <p className="text-base max-w-3xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, alias
           aut, harum totam non sapiente doloremque eum amet voluptas magni enim
           animi a nisi, eligendi quisquam et. Obcaecati, quisquam id? A autem
