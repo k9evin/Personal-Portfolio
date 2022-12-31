@@ -8,12 +8,13 @@ import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import { Background } from '../components/Background';
+import BackToTop from '../components/BackToTop';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <div className="text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-none ">
+    <div className="text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-none">
       <Background />
 
       <Head>
@@ -45,6 +46,8 @@ export default function Home() {
       <section id="contact" className="snap-start">
         <Contact />
       </section>
+
+      <BackToTop />
     </div>
   );
 }
