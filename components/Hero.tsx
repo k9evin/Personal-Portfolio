@@ -23,6 +23,7 @@ function Hero({}: Props) {
         height={180}
         className="relative rounded-full mx-auto object-cover"
         alt="Kevin"
+        priority
       />
       <div className='z-20'>
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px]">
