@@ -1,24 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Skill } from '../typings';
+import Image from 'next/image';
+import { urlFor } from '../sanity';
 
 type Props = {
-  directionLeft?: boolean;
+  directionBottom?: boolean;
+  skill: Skill;
 };
 
-function Skill({ directionLeft }: Props) {
+function Skill({ skill, directionBottom }: Props) {
   return (
     <motion.div
-      initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
+      initial={{ y: directionBottom ? 200 : -200, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="flex gap-2 items-center"
     >
-      <img
-        className="rounded-full h-10 w-10 inline-flex"
-        src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
-        alt="React"
+      <Image 
+        className="h-10 w-10 inline-flex"
+        src={urlFor(skill?.image).url()}
+        width={32}
+        height={32}
+        alt={skill?.title}
       />
-      <span className="hidden md:block text-white text-lg">React</span>
+      <span className="hidden md:block text-white text-lg">{skill?.title}</span>
     </motion.div>
   );
 }

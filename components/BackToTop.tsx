@@ -7,7 +7,7 @@ type Props = {};
 function BackToTop({}: Props) {
   return (
     <Link href="#hero">
-      <div className="fixed right-0 left-0 bottom-0 flex px-5 py-6 md:left-auto md:justify-end ">
+      <div className="fixed right-0 left-0 bottom-0 flex px-5 py-6 md:left-auto md:justify-end object-cover">
         <div className="pointer-events-none fixed right-0 left-0 bottom-0 h-48 bg-gradient-to-t from-black to-transparent"></div>
         <button
           type="button"

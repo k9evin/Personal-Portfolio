@@ -1,10 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -30,7 +34,7 @@ function About({}: Props) {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        src="https://s1.ax1x.com/2022/12/30/pSpqvY8.png"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="flex-shrink-0 w-24 h-24 rounded-full object-cover md:w-48 md:h-48 mt-10 mb-5"
       />
 
@@ -42,17 +46,7 @@ function About({}: Props) {
           </span>{' '}
           background
         </h4>
-        <p className="text-base max-w-3xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, alias
-          aut, harum totam non sapiente doloremque eum amet voluptas magni enim
-          animi a nisi, eligendi quisquam et. Obcaecati, quisquam id? A autem
-          soluta laudantium qui unde asperiores voluptatem repellat ratione nam
-          dolore corporis ipsum at, exercitationem ipsa eos doloremque, culpa
-          rerum saepe sed ex cumque. Omnis voluptate quas ea consequatur. Nobis
-          beatae sed labore similique ducimus, illum placeat assumenda quidem
-          cumque dolores in consectetur necessitatibus perspiciatis tempore
-          magnam ipsa.
-        </p>
+        <p className="text-base max-w-3xl">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
