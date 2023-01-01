@@ -37,7 +37,7 @@ export default function Home({
     <div
       className="text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-none bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/bg.png')",
+        backgroundImage: "url('https://s1.ax1x.com/2023/01/01/pSC6n9P.png')",
       }}
     >
       <Head>
