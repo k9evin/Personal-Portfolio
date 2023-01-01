@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPinIcon } from '@heroicons/react/24/solid';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import Image from 'next/image';
 
 type Inputs = {
   name: string;
@@ -20,9 +21,18 @@ function Contact({}: Props) {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl space-y-10 px-10 justify-center mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[15px] text-gray-500 text-2xl">
-        Contact
-      </h3>
+      <div className="flex absolute top-24 gap-4">
+        <Image
+          src="https://s1.ax1x.com/2023/01/01/pSCLe1S.png"
+          width={32}
+          height={32}
+          alt="Contact"
+          className="inline-flex h-8"
+        />
+        <h3 className="uppercase tracking-[15px] text-gray-400 text-2xl font-semibold">
+          Contact
+        </h3>
+      </div>
 
       <div className="flex flex-col space-y-10">
         <h4 className="text-4xl font-semibold text-center decoration-[#F7AB0A] underline">

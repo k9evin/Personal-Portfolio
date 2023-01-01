@@ -16,7 +16,7 @@ function About({ pageInfo }: Props) {
       transition={{ duration: 1.5 }}
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center"
     >
-      <div className="flex absolute top-24 gap-3">
+      <div className="flex absolute top-24 gap-4">
         <Image
           src="https://s1.ax1x.com/2022/12/30/pSpXkGT.png"
           width={32}
@@ -24,7 +24,7 @@ function About({ pageInfo }: Props) {
           alt="About me"
           className="inline-flex h-8"
         />
-        <h3 className="uppercase tracking-[15px] text-gray-500 text-2xl">
+        <h3 className="uppercase tracking-[15px] text-gray-400 text-2xl font-semibold">
           About
         </h3>
       </div>
@@ -46,7 +46,7 @@ function About({ pageInfo }: Props) {
           </span>{' '}
           background
         </h4>
-        <p className="text-base max-w-3xl">{pageInfo?.backgroundInformation}</p>
+        <p className="text-lg max-w-3xl">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );

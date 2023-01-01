@@ -30,7 +30,7 @@ function Hero({ pageInfo }: Props) {
         priority
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px]">
+        <h2 className="text-lg uppercase text-gray-300 pb-2 tracking-[10px]">
           {pageInfo?.role}
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">

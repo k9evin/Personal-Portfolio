@@ -1,8 +1,9 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
-import { ArrowDownCircleIcon } from '@heroicons/react/24/solid';
+import { InboxArrowDownIcon } from '@heroicons/react/24/solid';
 import { Social } from '../typings';
+import Link from 'next/link';
 
 type Props = {
   socials: Social[];
@@ -22,7 +23,7 @@ function Header({ socials }: Props) {
           <SocialIcon
             key={social._id}
             url={social.url}
-            fgColor="gray"
+            fgColor="#D1D5DB"
             bgColor="transparent"
           />
         ))}
@@ -34,12 +35,17 @@ function Header({ socials }: Props) {
         transition={{ duration: 1.7 }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
-        <button className="whitespace-nowrap md:rounded-full bg-white md:shadow transition md:border bg-opacity-0 hover:animate-pulse md:hover:animate-none text-gray-300 md:hover:bg-gray-200 md:hover:text-black py-2 px-2 space-x-2">
-          <ArrowDownCircleIcon className="cursor-pointer w-8 h-8 inline-flex" />
-          <p className="uppercase hidden md:inline-flex text-sm font-semibold pr-1">
-            Download Resume
-          </p>
-        </button>
+        <Link
+          href="https://www.alpacadisk.com/file/jt9e8yqes0bnv352-Resume.pdf/public/zOoyq3xxdHJ8XcIa"
+          target="_blank"
+        >
+          <button className="whitespace-nowrap md:rounded-full bg-white md:shadow transition md:border bg-opacity-0 hover:animate-pulse md:hover:animate-none text-gray-300 md:hover:bg-gray-200 md:hover:text-black py-3 px-3 space-x-2">
+            <InboxArrowDownIcon className="cursor-pointer w-6 h-6 inline-flex" />
+            <p className="uppercase hidden md:inline-flex text-sm font-semibold pr-1">
+              Download Resume
+            </p>
+          </button>
+        </Link>
       </motion.div>
     </header>
   );

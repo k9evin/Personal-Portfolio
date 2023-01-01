@@ -15,7 +15,7 @@ function Skill({ skill, directionBottom }: Props) {
       initial={{ y: directionBottom ? 200 : -200, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex gap-2 items-center"
+      className="flex gap-3 items-center"
     >
       <Image 
         className="h-10 w-10 inline-flex"

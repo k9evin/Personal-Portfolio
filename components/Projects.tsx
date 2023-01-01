@@ -17,11 +17,20 @@ function Projects({ projects }: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[15px] text-gray-500 text-2xl">
-        Projects
-      </h3>
+      <div className="flex absolute top-24 gap-4">
+        <Image
+          src="https://s1.ax1x.com/2023/01/01/pSCbjMQ.png"
+          width={32}
+          height={32}
+          alt="Projects"
+          className="inline-flex h-8"
+        />
+        <h3 className="uppercase tracking-[15px] text-gray-400 text-2xl font-semibold">
+          Projects
+        </h3>
+      </div>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-scroll snap-x snap-mandatory z-20 max-h-[60%] md:max-h-full md:overflow-y-hidden scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-white scale-95">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-scroll snap-x snap-mandatory z-20 max-h-[60%] md:max-h-full md:overflow-y-hidden scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-400/40 hover:scrollbar-thumb-gray-400/70">
         {projects.map((project, i) => (
           <div
             key={i}
@@ -39,18 +48,17 @@ function Projects({ projects }: Props) {
               />
             </Link>
 
-            <div className="space-y-10 px-0 md:px-10 max-w-5xl">
-              <h4 className="text-4xl font-semibold text-center">
+            <div className="space-t-10 px-0 md:px-10 max-w-5xl">
+              <h4 className="text-3xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]">
                   Case study {i + 1} of {projects.length}:
                 </span>{' '}
                 {project?.title}
               </h4>
 
-              <div className="flex items-center space-x-5 justify-center">
+              <div className="flex items-center space-x-5 justify-center py-4">
                 {project?.technologies.map((technology) => (
                   <Image
-                    className="h-10 w-10"
                     src={urlFor(technology?.image).url()}
                     alt={technology?.title}
                     key={technology?._id}
@@ -60,7 +68,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left pb-3">
+              <p className="text-lg text-center md:text-left pb-3 max-w-4xl">
                 {project?.summary}
               </p>
             </div>
