@@ -37,15 +37,20 @@ function Projects({ projects }: Props) {
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
             <Link href={`${project?.linksToBuild}`} target="_blank">
-              <motion.img
+              <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 2 }}
                 viewport={{ once: true }}
-                src={urlFor(project?.image).url()}
-                alt={project?.title}
-                className="hover:scale-110 transition-all duration-500 w-52 rounded-lg"
-              />
+              >
+                <Image
+                  src={urlFor(project?.image).url()}
+                  alt={project?.title}
+                  width={1028}
+                  height={792}
+                  className="hover:scale-110 transition-all duration-500 w-52 rounded-lg"
+                />
+              </motion.div>
             </Link>
 
             <div className="space-t-10 px-0 md:px-10 max-w-5xl">

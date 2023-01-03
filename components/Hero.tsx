@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageInfo } from '../typings';
 import { urlFor } from '../sanity';
+import { BackgroundParticles } from './BackgroundParticles';
 
 type Props = {
   pageInfo: PageInfo;
@@ -20,6 +21,7 @@ function Hero({ pageInfo }: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
+      <BackgroundParticles />
 
       <Image
         src={urlFor(pageInfo?.heroImage).url()}

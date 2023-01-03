@@ -15,6 +15,7 @@ import { fetchExperience } from '../utils/fetchExperiences';
 import { fetchSkills } from '../utils/fetchSkills';
 import { fetchProjects } from '../utils/fetchProjects';
 import { fetchSocials } from '../utils/fetchSocials';
+import Image from 'next/image';
 
 type Props = {
   pageInfo: PageInfo;
@@ -34,15 +35,48 @@ export default function Home({
   socials,
 }: Props) {
   return (
-    <div
-      className="text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-none bg-cover bg-center"
-      style={{
-        backgroundImage: "url('https://s1.ax1x.com/2023/01/01/pSC6n9P.png')",
-      }}
-    >
+    <div className="text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-none">
       <Head>
-        <title>Mingkai Pang</title>
+        <title>Mingkai Pang - Software Developer</title>
+        <meta
+          name="description"
+          content="Coding for humans. Come say hi 🌳"
+          key="desc"
+        />
+        <meta property="og:url" content="https://mkpang.space/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Mingkai Pang - Software Developer" />
+        <meta
+          property="og:description"
+          content="Hi! I'm Mingkai Pang, a software developer based in Blacksburg, student and avid open-sourcerer. I'm passionate about building software that makes a difference in people's lives."
+        />
+        <meta
+          property="og:image"
+          content="https://s1.ax1x.com/2023/01/03/pSiu1uF.jpg"
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Mingkai Pang" />
       </Head>
+
+      <div
+        style={{
+          position: 'fixed',
+          height: '100vh',
+          width: '100vw',
+          overflow: 'hidden',
+        }}
+      >
+        <Image
+          className="bg-cover bg-center"
+          alt="Background"
+          src="https://s1.ax1x.com/2023/01/03/pSiFa1H.jpg"
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+          }}
+        />
+      </div>
 
       <Header socials={socials} />
 

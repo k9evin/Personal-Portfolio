@@ -29,14 +29,20 @@ function About({ pageInfo }: Props) {
         </h3>
       </div>
 
-      <motion.img
+      <motion.div
         initial={{ x: -200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        src={urlFor(pageInfo?.profilePic).url()}
-        className="flex-shrink-0 w-24 h-24 rounded-full object-cover md:w-48 md:h-48 mt-10 mb-5"
-      />
+      >
+        <Image
+          src={urlFor(pageInfo?.profilePic).url()}
+          alt="Profile picture"
+          width={200}
+          height={200}
+          className="flex-shrink-0 w-24 h-24 object-cover md:w-48 md:h-48 mt-10 mb-5"
+        />
+      </motion.div>
 
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
