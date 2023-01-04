@@ -11,6 +11,8 @@
 
 > This repo contains the code powering [🚀 mkpang.space](https://mkpang.space/)
 
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=mingkai-portfolio&style=for-the-badge)
+
 ## Power by 🛠️
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
