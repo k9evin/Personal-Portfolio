@@ -48,7 +48,7 @@ function About({ pageInfo }: Props) {
         <h4 className="text-4xl font-semibold">
           Here is a{' '}
           <span className="underline decoration-[#F7AB0A] decoration-wavy">
-            litte
+            little
           </span>{' '}
           background
         </h4>
