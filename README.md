@@ -47,6 +47,6 @@
 
 **[Click here](https://mkpang.space/)** to view a live example
 
-## License 📄
+## License 🪪
 
 This project is <b>free to use</b> and does not contains any license.
