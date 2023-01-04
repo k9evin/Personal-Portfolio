@@ -36,7 +36,7 @@ function Contact({}: Props) {
 
       <div className="flex flex-col space-y-10">
         <h4 className="text-4xl font-semibold text-center decoration-[#F7AB0A] underline">
-          Lets Connect.
+          Let&#39;s Connect.
         </h4>
 
         <div className="flex items-center space-x-5 ">
