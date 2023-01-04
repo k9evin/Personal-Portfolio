@@ -19,7 +19,7 @@ function Hero({ pageInfo }: Props) {
   });
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden w-full">
       <BackgroundCircles />
       <BackgroundParticles />
 
@@ -32,15 +32,18 @@ function Hero({ pageInfo }: Props) {
         priority
       />
       <div className="z-20">
-        <h2 className="text-lg uppercase text-gray-300 pb-2 tracking-[10px]">
+        <h2 className="text-sm md:text-lg uppercase text-gray-300 pb-3 md:pb-5 tracking-[10px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-5xl lg:text-6xl font-semibold px-10 hidden md:block">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold px-10 md:hidden">
+          <span className="mr-3">Hey, My name is Mingkai Pang</span>
+        </h1>
 
-        <div className="pt-5">
+        <div className="pb-3 md:pb-5">
           <Link href="#about">
             <button className="heroButton hover:border-white">About</button>
           </Link>

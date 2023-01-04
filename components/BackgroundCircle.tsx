@@ -12,7 +12,7 @@ function BackgroundCircle({}: Props) {
         opacity: [0.1, 0.2, 0.4, 0.8, 1.0],
         borderRadius: ['20%', '20%', '50%', '80%', '20%'],
       }}
-      transition={{ duration: 1.7 }}
+      transition={{ duration: 1.3 }}
       className="relative flex justify-center items-center"
     >
       <div className="absolute border border-border-[#333333] rounded-full h-[200px] w-[200px] mt-52 animate-ping" />

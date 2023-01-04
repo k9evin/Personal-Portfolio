@@ -15,7 +15,7 @@ function Header({ socials }: Props) {
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.3 }}
         className="flex flex-row items-center"
       >
         {/* Social Icons */}
@@ -30,9 +30,9 @@ function Header({ socials }: Props) {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.7 }}
+        initial={{ x: 500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1.3 }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         <Link

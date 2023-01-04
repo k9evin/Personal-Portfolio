@@ -34,7 +34,7 @@ function Projects({ projects }: Props) {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:p-44 md:h-screen scale-90 md:scale-100"
           >
             <Link href={`${project?.linksToBuild}`} target="_blank">
               <motion.div
@@ -54,9 +54,9 @@ function Projects({ projects }: Props) {
             </Link>
 
             <div className="space-t-10 px-0 md:px-10 max-w-5xl">
-              <h4 className="text-3xl font-semibold text-center">
+              <h4 className="text-xl md:text-3xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]">
-                  Case study {i + 1} of {projects.length}:
+                  {i + 1} of {projects.length}:
                 </span>{' '}
                 {project?.title}
               </h4>
@@ -73,7 +73,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left pb-3 max-w-4xl">
+              <p className="text-lg text-center md:text-left pb-3 max-w-4xl hidden md:block">
                 {project?.summary}
               </p>
             </div>

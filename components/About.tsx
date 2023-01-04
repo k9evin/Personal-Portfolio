@@ -44,15 +44,15 @@ function About({ pageInfo }: Props) {
         />
       </motion.div>
 
-      <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+      <div className="space-y-5 md:space-y-10 px-0 md:px-10">
+        <h4 className="text-2xl md:text-3xl font-semibold">
           Here is a{' '}
           <span className="underline decoration-[#F7AB0A] decoration-wavy">
             little
           </span>{' '}
           background
         </h4>
-        <p className="text-lg max-w-3xl">{pageInfo?.backgroundInformation}</p>
+        <p className="text-sm md:text-lg max-w-3xl">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );

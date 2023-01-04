@@ -34,53 +34,55 @@ function Contact({}: Props) {
         </h3>
       </div>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center decoration-[#F7AB0A] underline">
-          Let&#39;s Connect.
-        </h4>
+      <div className="flex items-center flex-col scale-90 md:space-x-20 md:flex-row md:scale-100">
+        <div className="flex flex-col space-y-6  ">
+          <h4 className="text-4xl font-semibold text-center decoration-[#F7AB0A] underline">
+            Let&#39;s Connect.
+          </h4>
 
-        <div className="flex items-center space-x-5 ">
-          <MapPinIcon className="h-7 w-7 animate-bounce" />
-          <p className="text-2xl">Blacksburg, VA</p>
+          <div className="flex items-center space-x-5 ">
+            <MapPinIcon className="h-7 w-7 animate-bounce" />
+            <p className="text-2xl">Blacksburg, VA</p>
+          </div>
         </div>
-      </div>
 
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col space-y-2 w-fit mx-auto justify-center"
-      >
-        <div className="md:flex md:space-x-2 space-y-2 md:space-y-0">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col space-y-2 w-fit mx-auto justify-center pt-5 md:pt-0"
+        >
+          <div className="md:flex md:space-x-2 space-y-2 md:space-y-0">
+            <input
+              {...register('name')}
+              className="contactInput block"
+              placeholder="Name"
+              type="text"
+            />
+            <input
+              {...register('email')}
+              className="contactInput block"
+              placeholder="Email"
+              type="email"
+            />
+          </div>
           <input
-            {...register('name')}
-            className="contactInput block"
-            placeholder="Name"
+            {...register('subject')}
+            className="contactInput"
+            placeholder="Subject"
             type="text"
           />
-          <input
-            {...register('email')}
-            className="contactInput block"
-            placeholder="Email"
-            type="email"
+          <textarea
+            {...register('message')}
+            className="contactInput md:h-48"
+            placeholder="Message"
           />
-        </div>
-        <input
-          {...register('subject')}
-          className="contactInput"
-          placeholder="Subject"
-          type="text"
-        />
-        <textarea
-          {...register('message')}
-          className="contactInput h-32 md:48"
-          placeholder="Message"
-        />
-        <button
-          type="submit"
-          className="bg-[#F7AB0A] py-4 px-10 rounded-lg text-black font-bold text-lg"
-        >
-          Submit
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="bg-[#F7AB0A] py-4 px-10 rounded-lg text-black font-bold text-lg"
+          >
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
