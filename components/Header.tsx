@@ -36,7 +36,7 @@ function Header({ socials }: Props) {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         <Link
-          href="https://www.alpacadisk.com/file/jt9e8yqes0bnv352-Resume.pdf/public/zOoyq3xxdHJ8XcI"
+          href="https://www.alpacadisk.com/file/mb1zvh0k4g3jh573-Mingkai-Pang-Resume.pdf/public/Z1LhbS4zITopSUY2"
           target="_blank"
         >
           <button className="whitespace-nowrap md:rounded-full bg-white md:shadow transition md:border bg-opacity-0 hover:animate-pulse md:hover:animate-none text-gray-300 md:hover:bg-gray-200 md:hover:text-black py-3 px-3 space-x-2">
