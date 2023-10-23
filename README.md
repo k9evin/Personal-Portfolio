@@ -9,7 +9,7 @@
 
 > A clean, beautiful, responsive portfolio template for Software Developers!
 
-> This repo contains the code powering [🚀 mkpang.space](https://mkpang.space/)
+> This repo contains the code powering 🚀[mkpang.space](https://mkpang.space/)
 
 ![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=mingkai-portfolio&style=for-the-badge)
 
@@ -51,4 +51,4 @@
 
 ## License 🪪
 
-This project is <b>free to use</b> and does not contains any license.
+MIT License
