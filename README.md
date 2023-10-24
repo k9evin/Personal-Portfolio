@@ -7,7 +7,7 @@
 
 # Welcome 👋
 
-> A clean, beautiful, responsive portfolio template for Software Developers!
+> A clean, beautiful, responsive portfolio for Software Developers!
 
 > This repo contains the code powering 🚀[mkpang.space](https://mkpang.space/)
 
