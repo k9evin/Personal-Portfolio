@@ -16,6 +16,7 @@ import {fetchSkills} from '../utils/fetchSkills';
 import {fetchProjects} from '../utils/fetchProjects';
 import {fetchSocials} from '../utils/fetchSocials';
 import Image from 'next/image';
+import background from '../public/background.jpeg';
 
 type Props = {
     pageInfo: PageInfo;
@@ -70,7 +71,7 @@ export default function Home({
                 <Image
                     className="bg-cover bg-center"
                     alt="Background"
-                    src="https://s1.ax1x.com/2023/01/03/pSiFa1H.jpg"
+                    src={background}
                     fill
                     sizes="100vw"
                     style={{
