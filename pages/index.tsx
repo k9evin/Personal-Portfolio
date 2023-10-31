@@ -80,7 +80,7 @@ export default function Home({
                 />
             </div>
 
-            <Header socials={socials}/>
+            <Header socials={socials} pageInfo={pageInfo}/>
 
             <section id="hero" className="snap-start">
                 <Hero pageInfo={pageInfo}/>

@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineType} from 'sanity'
 
 export default defineType({
   name: 'experience',
@@ -13,7 +13,7 @@ export default defineType({
     {
       name: 'company',
       title: 'Company',
-      type: 'text',
+      type: 'string',
     },
     {
       name: 'dateStarted',
