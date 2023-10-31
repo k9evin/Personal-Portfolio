@@ -13,7 +13,7 @@ type Props = {
 
 function Hero({pageInfo}: Props) {
     const [text, count] = useTypewriter({
-        words: [`Hey, My name is ${pageInfo?.name}`, 'Guy-who-loves-coding.tsx'],
+        words: [`Hey, My name is ${pageInfo?.name}`, 'A software developer', 'Guy-who-loves-coding.tsx'],
         loop: true,
         delaySpeed: 2500,
     });
@@ -24,9 +24,9 @@ function Hero({pageInfo}: Props) {
             <BackgroundParticles/>
 
             <motion.div
-                initial={{scale: 0}}
-                animate={{scale: 1}}
-                transition={{duration: 1.5}}
+                initial={{y: -150, opacity: 0, scale: 0.5}}
+                whileInView={{y: 0, opacity: 1, scale: 1}}
+                transition={{type: "spring", stiffness: 70, delay: 0.5}}
             >
                 <Image
                     src={urlFor(pageInfo?.heroImage).url()}

@@ -10,10 +10,7 @@ type Props = {
 
 function WorkExperience({experiences}: Props) {
     return (
-        <motion.div
-            initial={{opacity: 0}}
-            whileInView={{opacity: 1}}
-            transition={{duration: 1.5}}
+        <div
             className="h-screen flex relative overflow-hidden flex-col text-lft md:flex-row max-w-full px-10 justify-center mx-auto items-center"
         >
             <div className="flex absolute top-20 gap-4">
@@ -29,13 +26,16 @@ function WorkExperience({experiences}: Props) {
                 </h3>
             </div>
 
-            <div
+            <motion.div
+                initial={{opacity: 0.5}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 1.5, ease: 'easeInOut'}}
                 className="mt-10 flex space-x-7 overflow-x-scroll p-10 snap-x snap-mandatory scale-95 md:scale-75 scrollbar-thin scrollbar-thumb-rounded scrollbar-track-transparent scrollbar-thumb-gray-400/40 hover:scrollbar-thumb-gray-400/80">
                 {experiences.map((experience) => (
                     <ExperienceCard key={experience._id} experience={experience}/>
                 ))}
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     );
 }
 

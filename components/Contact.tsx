@@ -2,6 +2,7 @@ import React from 'react';
 import {MapPinIcon} from '@heroicons/react/24/solid';
 import {SubmitHandler, useForm} from 'react-hook-form';
 import Image from 'next/image';
+import {motion} from 'framer-motion';
 
 type Inputs = {
     name: string;
@@ -35,7 +36,11 @@ function Contact({}: Props) {
                 </h3>
             </div>
 
-            <div className="flex items-center flex-col scale-90 md:space-x-20 md:flex-row md:scale-100">
+            <motion.div
+                initial={{opacity: 0, x: -200}}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{type: "spring", stiffness: 70, delay: 0.5}}
+                className="flex items-center flex-col scale-90 md:space-x-20 md:flex-row md:scale-100">
                 <div className="flex flex-col space-y-6  ">
                     <h4 className="text-4xl font-semibold text-center decoration-[#F7AB0A] underline">
                         Let&#39;s Connect.
@@ -83,7 +88,7 @@ function Contact({}: Props) {
                         Send
                     </button>
                 </form>
-            </div>
+            </motion.div>
         </div>
     );
 }

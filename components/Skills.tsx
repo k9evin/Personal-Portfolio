@@ -13,7 +13,7 @@ function Skills({skills}: Props) {
         <motion.div
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
-            transition={{duration: 1.5}}
+            transition={{duration: 1.5, delay: 0.5, ease: 'easeInOut'}}
             className="flex relative flex-col text-center md:text-left xl:flex-row xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
         >
             <div className="flex absolute top-24 gap-4">

@@ -3,12 +3,21 @@ import {motion} from 'framer-motion';
 import Image from 'next/image';
 import {PageInfo} from '../typings';
 import {urlFor} from '../sanity';
+import {Cursor, useTypewriter} from "react-simple-typewriter";
 
 type Props = {
     pageInfo: PageInfo;
 };
 
 function About({pageInfo}: Props) {
+
+    // use typewriter for background information
+    const [text, count] = useTypewriter({
+        words: [`${pageInfo?.backgroundInformation}`],
+        loop: 1,
+        typeSpeed: 40,
+    });
+
     return (
         <motion.div
             initial={{opacity: 0}}
@@ -32,8 +41,7 @@ function About({pageInfo}: Props) {
             <motion.div
                 initial={{x: -200, opacity: 0}}
                 whileInView={{x: 0, opacity: 1}}
-                viewport={{once: true}}
-                transition={{duration: 1}}
+                transition={{duration: 1, delay: 0.5, ease: 'easeInOut'}}
             >
                 <Image
                     src={urlFor(pageInfo?.profilePic).url()}
@@ -48,11 +56,11 @@ function About({pageInfo}: Props) {
                 <h4 className="text-2xl md:text-3xl font-semibold">
                     Here is a{' '}
                     <span className="underline decoration-[#F7AB0A] decoration-wavy">
-            little
-          </span>{' '}
+                    little
+                    </span>{' '}
                     background
                 </h4>
-                <p className="text-sm md:text-lg max-w-3xl">{pageInfo?.backgroundInformation}</p>
+                <p className="text-sm md:text-lg max-w-3xl">{text}<Cursor cursorColor="#F7AB0A"/></p>
             </div>
         </motion.div>
     );

@@ -14,9 +14,8 @@ function Projects({projects}: Props) {
         <motion.div
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
-            transition={{duration: 1.5}}
-            className="h-screen relative flex overflow-hidden flex-col md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
-        >
+            transition={{duration: 1.5, delay: 0.5, ease: 'easeInOut'}}
+            className="h-screen relative flex overflow-hidden flex-col md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
             <div className="flex absolute top-20 gap-4">
                 <Image
                     src="https://s1.ax1x.com/2023/01/01/pSCbjMQ.png"
@@ -56,9 +55,9 @@ function Projects({projects}: Props) {
 
                         <div className="space-t-10 px-0 md:px-10 max-w-5xl">
                             <h4 className="text-lg md:text-2xl font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]">
-                  {i + 1} of {projects.length}:
-                </span>{' '}
+                                <span className="underline decoration-[#F7AB0A]">
+                                  {i + 1} of {projects.length}:
+                                </span>{' '}
                                 {project?.title}
                             </h4>
 
