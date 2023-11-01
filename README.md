@@ -34,7 +34,8 @@
 ## Installation & Deployment 📦
 
 - Clone the repository and modify the content in <b>index.html</b> to your need.
-- I recommend using [Vercel](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy) to deploy the website in the EASIEST WAY.
+- I recommend using [Vercel](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy) to deploy the website in the
+  EASIEST WAY.
 - Once you’re signed up, import your portfolio repository on Vercel.
 - Push your code to the `main` branch of the repository, and vercel will automatically buil
 
