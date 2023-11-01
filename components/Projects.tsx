@@ -34,7 +34,7 @@ function Projects({ projects }: Props) {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:p-44 md:h-screen scale-90 md:scale-100"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:h-screen scale-90 md:scale-100"
           >
             <Link href={`${project?.linksToBuild}`} target="_blank">
               <motion.div

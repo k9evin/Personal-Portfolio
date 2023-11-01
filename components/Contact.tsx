@@ -17,7 +17,7 @@ function Contact({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:pangmin@vt.edu?subject=[Portfolio Website] ${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+    window.location.href = `mailto:mingkaip@usc.edu?subject=[Portfolio Website] ${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
   };
 
   return (
